@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Khóa Học</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .readonly {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Tạo/Cập Nhật Khóa Học</h2>
+    <form id="courseForm">
+        <label for="courseId">Mã Khóa Học</label>
+        <input type="text" id="courseId" class="readonly" readonly value="AUTO_GENERATED_ID">
+
+        <label for="courseName">Tên Khóa Học <span style="color:red">*</span></label>
+        <input type="text" id="courseName" required maxlength="255">
+
+        <label for="courseDescription">Mô Tả Khóa Học</label>
+        <textarea id="courseDescription" rows="5"></textarea>
+
+        <label for="instructor">Giảng Viên</label>
+        <select id="instructor" required>
+            <option value="" disabled selected>Chọn giảng viên</option>
+            <!-- Điền danh sách giảng viên từ bảng Người Dùng -->
+            <option value="instructor1">Giảng Viên 1</option>
+            <option value="instructor2">Giảng Viên 2</option>
+        </select>
+
+        <label for="createdAt">Thời Gian Tạo</label>
+        <input type="text" id="createdAt" class="readonly" readonly value="CREATED_AT_TIMESTAMP">
+
+        <label for="updatedAt">Thời Gian Cập Nhật</label>
+        <input type="text" id="updatedAt" class="readonly" readonly value="UPDATED_AT_TIMESTAMP">
+
+        <button type="submit">Gửi</button>
+        <button type="button" id="deleteButton">Xóa</button>
+        <button type="reset">Đặt Lại</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('courseForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Xử lý logic gửi biểu mẫu (tạo/cập nhật khóa học)
+        alert('Khóa học đã được gửi!');
+    });
+    
+    document.getElementById('deleteButton').addEventListener('click', function() {
+        if (confirm('Bạn có chắc chắn muốn xóa khóa học này không?')) {
+            // Xử lý logic xóa
+            alert('Khóa học đã được xóa!');
+        }
+    });
+</script>
+
+</body>
+</html>
