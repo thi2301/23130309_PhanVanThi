@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Môn Học</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 5px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .action-btn {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .action-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quản Lý Môn Học</h1>
+    <form id="courseForm" onsubmit="handleSubmit(event)">
+        <label for="courseId">Mã Môn Học</label>
+        <input type="text" id="courseId" name="courseId" required>
+
+        <label for="courseName">Tên Môn Học</label>
+        <input type="text" id="courseName" name="courseName" required maxlength="255">
+
+        <label for="courseDescription">Mô Tả Môn Học</label>
+        <textarea id="courseDescription" name="courseDescription"></textarea>
+
+        <label for="createdBy">Giáo Viên</label>
+        <input type="text" id="createdBy" name="createdBy" required>
+
+        <button type="submit">Lưu</button>
+    </form>
+
+    <table id="courseTable">
+        <thead>
+            <tr>
+                <th>Mã Môn Học</th>
+                <th>Tên Môn Học</th>
+                <th>Mô Tả</th>
+                <th>Giáo Viên</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dữ liệu sẽ được thêm vào đây -->
+        </tbody>
+    </table>
+
+    <script>
+        let editingRow = null;
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Ngăn chặn gửi form
+
+            const courseId = document.getElementById('courseId').value;
+            const courseName = document.getElementById('courseName').value;
+            const courseDescription = document.getElementById('courseDescription').value;
+            const createdBy = document.getElementById('createdBy').value;
+
+            if (editingRow) {
+                // Cập nhật hàng hiện tại
+                editingRow.cells[0].innerText = courseId;
+                editingRow.cells[1].innerText = courseName;
+                editingRow.cells[2].innerText = courseDescription;
+                editingRow.cells[3].innerText = createdBy;
+                editingRow = null; // Reset biến chỉnh sửa
+            } else {
+                // Thêm dòng mới vào bảng
+                const table = document.getElementById('courseTable').getElementsByTagName('tbody')[0];
+                const newRow = table.insertRow();
+                newRow.innerHTML = `
+                    <td>${courseId}</td>
+                    <td>${courseName}</td>
+                    <td>${courseDescription}</td>
+                    <td>${createdBy}</td>
+                    <td>
+                        <button class="action-btn" onclick="editRow(this)">Sửa</button>
+                        <button class="action-btn" onclick="deleteRow(this)">Xóa</button>
+                    </td>
+                `;
+            }
+
+            // Reset form
+            document.getElementById('courseForm').reset();
+        }
+
+        function deleteRow(button) {
+            const row = button.parentNode.parentNode; // Lấy hàng cha của nút
+            row.parentNode.removeChild(row); // Xóa hàng khỏi bảng
+        }
+
+        function editRow(button) {
+            editingRow = button.parentNode.parentNode; // Lấy hàng cần chỉnh sửa
+
+            // Điền thông tin vào form
+            document.getElementById('courseId').value = editingRow.cells[0].innerText;
+            document.getElementById('courseName').value = editingRow.cells[1].innerText;
+            document.getElementById('courseDescription').value = editingRow.cells[2].innerText;
+            document.getElementById('createdBy').value = editingRow.cells[3].innerText;
+        }
+    </script>
+</body>
+</html>
