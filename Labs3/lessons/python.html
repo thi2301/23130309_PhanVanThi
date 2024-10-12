@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>python</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab" onclick="showTab('baigiang')">Bài Giảng</div>
+        <div class="tab" onclick="showTab('baitap')">Bài Tập</div>
+        <div class="tab" onclick="showTab('tailieuthamkhao')">Tài Liệu Tham Khảo</div>
+    </div>
+    <div id="baigiang" class="tabcontent" style="display:none;">
+        <h2>Tổng quan về Python</h2>
+        <h3>Giới thiệu Python</h3>
+        <p>
+        Python được sáng tạo bởi Guido van Rossum vào những năm cuối thập niên 80, 
+        đầu thập niên 90 tại Viện nghiên cứu Quốc gia về Toán học và Khoa học máy tính ở Hà Lan.
+        <br>
+        Python là một ngôn ngữ bậc cao, thông dịch, ngôn ngữ kịch bản tương tác và hướng đối tượng. 
+        Python được thiết kế để lập trình viên có thể đọc hiểu dễ dàng nhất. 
+        Python thưởng sử dụng các từ khóa tiếng anh trong khi các ngôn ngữ khác thường sử dụng các dấu câu. 
+        Cấu trức cú pháp của nó cũng dễ dàng hơn sơ với các ngôn ngữ khác. 
+        Python rất dễ học bởi vì tài liệu liên quan có thể tìm thấy ở bất cứ đâu.
+        <h3>Ứng dụng của Python</h3>
+        <li>Python để viết ngôn ngữ lập trình kịch bản (scripting language)</li>
+        Nếu bạn đang có ý định viết một chương trình mẫu (miniature) 
+        hay một chương trình tùy biến (ad-hoc) để tự động hóa những việc bạn làm trên máy tính, 
+        hãy nghĩ tới việc ứng dụng Python! Người ta hay dùng nó với mục đích này. <br>
+        Khả năng khai thác những nguồn thư viện đa dạng của loại ngôn ngữ này sẽ cho phép bạn làm được rất nhiều thứ thú vị. <br>       
+        Nhiều người đã ứng dụng Python để viết ra một đoạn script mà bạn có thể đưa vào bất cứ một
+        video nào và chương trình sẽ cho ra hàng loạt các bản ghi (transcript) đã được chuyển ngữ ngẫu nhiên. 
+        Những bản này cũng không mấy hoàn hảo nguyên nhân là do cách dùng từ và ngữ điệu của người Châu Á chúng ta, 
+        tuy nhiên ít nhất thì nó cũng được miễn phí.
+        <h3>Các ứng dụng web</h3>
+        Bạn có biết rằng một số đơn vị đình đám đã được xây dựng nhờ vào ngôn ngữ lập trình Python không?
+        <img src="/image/img_labs3/1.jpg" alt="ảnh minh họa">
+        Dưới đây là một danh sách lướt nhanh những công ty này:
+        <ul>
+            <li>Dropbox.</li>
+            <li>Netflix.</li>
+            <li> Spotify.</li>
+            <li>Instagram.</li>
+            <li>21% cơ sở hạ tầng dữ liệu của Facebook.</li>
+            <li>Youtube.</li>
+        </ul>
+        Trong lĩnh vực phát triển ứng dụng web, khi nói đến ngôn ngữ Python, ta có thể kể tới các framework như Django và Flask. 
+        Nếu bạn có một sự hiểu biết nhất định về lập trình và các framework cho web, bạn có thể xây dựng rất nhiều loại ứng dụng Python.
+        </p>
+        
+    </div>
+    <div id="baitap" class="tabcontent" style="display:none;">
+        <h2>Bài tập Python cấp độ 1 dành cho người mới bắt đầu</h2>
+        <p>Bài 1: Viết chương trình in ra “Hello, world!”.<br>
+        print(“Hello, world!”)</p>
+    </div>
+    <div id="tailieuthamkhao" class="tabcontent" style="display:none;">
+        
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            var i, tabcontent, tabs;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none"; // Ẩn tất cả tab
+            }
+            // Hiển thị tab được chọn
+            document.getElementById(tabName).style.display = "block"; 
+        }
+    </script>
+
+
+
+    <a href="/index.html">Quay Lại Trang Chủ</a>
+</body>
+</html>
