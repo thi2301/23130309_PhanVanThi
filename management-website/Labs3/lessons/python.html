@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div>
+        <a href="/Labs3/lessons.html">Quay Lại</a>
+    </div>
+
     <div class="tabs">
         <div class="tab" onclick="showTab('baigiang')">Bài Giảng</div>
         <div class="tab" onclick="showTab('baitap')">Bài Tập</div>
@@ -53,11 +57,62 @@
     </div>
     <div id="baitap" class="tabcontent" style="display:none;">
         <h2>Bài tập Python cấp độ 1 dành cho người mới bắt đầu</h2>
-        <p>Bài 1: Viết chương trình in ra “Hello, world!”.<br>
-        print(“Hello, world!”)</p>
+        <p>
+            <b>Bài 1:</b> Viết chương trình in ra “Hello, world!”.<br>
+           <code> print(“Hello, world!”)</code>
+        </p>
+        <P>
+            <b>Bài 2:</b> Nhập một số từ bàn phím và in ra số đó.<br>
+            <code>
+                number = input(“Nhập một số: “) <br>
+                print(number)
+            </code>
+        </P>
+        <p>
+            <b>Bài 3:</b> Viết chương trình kiểm tra xem một số là chẵn hay lẻ.<br>
+            <code>
+                <pre>
+                number = int(input(“Nhập một số: “))
+
+                if number % 2 == 0:
+
+                  print(“Số chẵn”)
+
+                else:
+
+                 print(“Số lẻ”)
+                </pre>
+            </code>
+        </p>
     </div>
+
     <div id="tailieuthamkhao" class="tabcontent" style="display:none;">
-        
+        <h3>Top các tài liệu học ngôn ngữ lập trình Python cơ bản – nâng cao bạn nên đọc</h3>
+        <p>
+            <b>1. Sách Python cơ bản</b> <br>
+            “Python cơ bản – rất là cơ bản” của tác giả Võ Duy Tuấn.  Đây là cuốn tài liệu Tiếng Việt đầy đủ, dễ đọc, 
+            dễ hiểu dành cho bất kỳ ai quan tâm và bắt đầu làm quen với Python, một ngôn ngữ “hot” đang rất được ưa chuộng.
+        </p>
+            <img src="/image/img_labs3/2.jpg" alt="ảnh minh họa">
+        <p>
+            Sách được chia làm 15 chương, mỗi chương sẽ trình bày 1 khía cạnh của Python mà bạn sẽ gặp phải 
+            và sẽ hữu ích khi biết các kiến thức này trong việc áp dụng Python vào công việc trong tương lai.<br>
+            Nội dung bao gồm: Hello world, Cú pháp, Phân chia module, Class, Kết nối MySQL, Kết nối Redis, Kết nối Memcached, 
+            Kết nối RabbitMQ, Restful, Client, Thao tác trên tập tin, Xử lý hình ảnh, Xử lý file JSON, Xử lý file XML, 
+            Gởi email với SMTP Socket Programming…
+            <a href="https://pages.codegym.vn/tai-lieu-python-co-ban-python-cho-nguoi-moi-bat-dau/" target="_blank">Download tại đây</a>
+        </p>
+        <p>
+            <b>2. A Byte of Python</b>
+            Cuốn sách này được xem như là bài hướng dẫn cho những người mới bắt đầu về lập trình đến với ngôn ngữ Python 
+            và cũng là một trong những tài liệu học lập trình Python chọn lọc mà CodeGym muốn gợi ý cho bạn.<br>
+            Cuốn sách sẽ cung cấp các chỉ dẫn và tutorial để bước dần làm quen với ngôn ngữ lập trình này.
+        </p>
+        <img src="/image/img_labs3/3.jpg" alt="ảnh minh họa">
+        <p>
+            Ngoài ra, cuốn sách này còn chỉ cho bạn cách sử dụng Python version 3, cũng như cách làm quen với phiên bản cũ hơn như Python version 2.
+        </p>
+        <a href="https://python.swaroopch.com/" target="_blank">Xem tài liệu tại đây</a>
     </div>
 
     <script>

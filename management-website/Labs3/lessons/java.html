@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div>
+        <a href="/Labs3/lessons.html">Quay Lại</a>
+    </div>
+
+    <div class="tabs">
+        <div class="tab" onclick="showTab('baigiang')">Bài Giảng</div>
+        <div class="tab" onclick="showTab('baitap')">Bài Tập</div>
+        <div class="tab" onclick="showTab('tailieuthamkhao')">Tài Liệu Tham Khảo</div>
+    </div>
+    <div id="baigiang" class="tabcontent" style="display:none;">
+        <h2>Java là gì?</h2>
+        <p>
+            Java là ngôn ngữ lập trình bậc cao, được phát triển bởi Sun Microsystems, do James Gosling khởi xướng và phát hành vào năm 1995 như là một thành phần cốt lõi của nền tảng Java của Sun Microsystems (Java 1.0 [J2SE]). Java chạy trên rất nhiều nền tảng khác nhau, như Windows, Mac và các phiên bản khác nhau của UNIX.<br>
+            Java được hiểu là một loại ngôn ngữ lập trình hướng đối tượng (OOP) và dựa trên các lớp. Không giống với những ngôn ngữ lập trình thông thường, thay vì việc biên dịch mã nguồn trở thành mã nguồn máy hoặc trực tiếp thông dịch mã nguồn khi chạy thì Java được thiết kế để biên dịch mã nguồn thành bytecode. Sau đó, bytecode sẽ được môi trường thực thi (runtime environment).<br>
+
+        </p>
+        <h2>Đặc điểm của Java</h2>
+        <p>
+            <li>Hướng đối tượng: Trong Java, mọi thứ đều là Object. Java có thể mở rộng vì nó dựa trên mô hình Object.</li>
+            <li>Nền tảng độc lập: Không giống như nhiều ngôn ngữ lập trình khác (C, C++), khi Java được biên dịch, nó không biên dịch sang một máy tính cụ thể trên nền tảng nào, thay vào đó là những byte code độc lập với nền tảng. Byte code này được phân phối trên web và được thông dịch bằng Virtual Machine (JVM) trên bất cứ nền tảng nào mà nó đang chạy.</li>
+            <li>Đơn giản: Java được thiết kế để dễ học. Nếu bạn hiểu cơ bản về khái niệm lập trình hướng đối tượng Java, thì có thể nắm bắt ngôn ngữ này rất nhanh.</li>
+            <li>Bảo mật: Với tính năng an toàn của Java, nó cho phép phát triển những hệ thống không có virus, giả mạo. Các kỹ thuật xác thực dựa trên mã hóa công khai.</li>
+            <li>Kiến trúc trung lập: Trình biên dịch của Java tạo ra một định dạng file object có kiến trúc trung lập, làm cho code sau khi biên dịch có thể chạy trên nhiều bộ vi xử lý, với sự hiện diện của Java runtime system.</li>
+            <li>Portable: Là kiến trúc trung lập và không phụ thuộc vào việc thực hiện là những đặc điểm chính nhất khi nói về khía cạnh Portable của Java. Trình biên dịch trong Java được viết bằng ANSI C với một ranh giới portable gọn gàng, đó là một subset POSIX (giao diện hệ điều hành linh động). Bạn có thể mang byte code của Java lên bất cứ nền tảng nào.</li>
+            <li>Mạnh mẽ: Java nỗ lực loại trừ những tình huống dễ bị lỗi bằng cách nhấn mạnh chủ yếu là kiểm tra lỗi thời gian biên dịch và kiểm tra runtime.</li>
+            <li>Đa luồng: Với tính năng đa luồng của Java, bạn có thể viết các chương trình có thể thực hiện nhiều tác vụ đồng thời. Tính năng này cho phép các nhà phát triển xây dựng các ứng dụng tương tác có thể chạy trơn tru.</li>
+            <li>Thông dịch: Byte code của Java được dịch trực tiếp tới các nền tảng gốc và nó không được lưu trữ ở bất cứ đâu. </li>
+            <li>Hiệu suất cao: Với việc sử dụng trình biên dịch Just-In-Time, Java cho phép thực thi với hiệu suất cao, nhanh chóng phát hiện, gỡ lỗi.</li>
+            <li>Phân tán: Java được thiết kế cho môi trường phân tán của Internet.</li>
+            <li>Linh động: Java được coi là năng động hơn C hay C++ vì nó được thiết kế để thích nghi với môi trường đang phát triển. Các chương trình Java có thể mang theo một lượng lớn thông tin run-time, được sử dụng để xác minh và giải quyết các truy cập đến đối tượng trong thời gian chạy.</li>
+        </p>
+        <h2>Ứng dụng của JAVA</h2>
+        <p>
+            Có 4 loại ứng dụng chính mà có thể được tạo bởi sử dụng ngôn ngữ lập trình Java:
+        </p>
+        <li>Standalone App</li>
+        <img src="/image/img_labs3/Java_appp.png" alt=" ảnh minh họa">
+        <p>
+            Nó còn được biết đến với tên gọi khác là Destop App hoặc Windows-based App. Một ứng dụng mà chúng ta cần cài đặt trên mỗi thiết bị như media player, antivirus, … AWT và Swing được sử dụng trong Java để tạo các Standalone App.
+        </p>
+        <li>Web App</li>
+        <img src="/image/img_labs3/java_web.gif" alt="ảnh minh họa web app">
+        <p>
+            Một ứng dụng mà chạy trên Server Side và tạo Dynamic Page, được gọi là Web App. Hiện tại, các công nghệ Servlet, JSP, Struts, JSF, … được sử dụng để tạo Web App trong Java.
+        </p>
+        <li>Enterprise App</li>
+        <p>
+            Một ứng dụng dạng như Banking App, có lợi thế là tính bảo mật cao, cân bằng tải (load balancing) và clustering. Trong java, EJB được sử dụng để tạo các Enterprise App.
+        </p>
+        <li>Mobile App</li>
+        <img src="/image/img_labs3/Java_mobileApp.jpg" alt="ảnh minh họa mobile app">
+        <p>
+            Đây là loại ứng dụng được tạo cho thiết bị mobile. Hiện tại thì Android và Java ME được sử dụng để tạo loại ứng dụng này.
+        </p>
+    </div>
+
+    <div id="baitap" class="tabcontent" style="display:none;">
+       <h2>Bài tập java cơ bản</h2>
+       <p>
+        <b>Bài 1</b>
+        <li>Viết chương trình cho phép nhập vào n, sau đó nhập vào n phần tử số nguyên dương.</li>
+        <li>Cuối cùng, chương trình sẽ xuất ra phần tử có giá trị lớn nhất.</li>
+        <br>
+        <b>Bài 2</b>
+        <li>Viết chương trình cho phép nhập vào n, sau đó nhập vào n phần tử số nguyên.</li>
+        <li>Sắp xếp các phần tử trong mảng theo thứ tự ngược lại.</li>
+        </p>
+
+    </div>
+
+    <div id="tailieuthamkhao" class="tabcontent" style="display:none;">
+       <h2>Tài liệu học lập trình Java từ cơ bản đến nâng cao</h2>
+       <a href="https://slimshare.com/file/5b2cc4cfae2aeb71b8138bd7" target="_blank">1. Download Head First Java, 2nd Edition</a>
+       <img href="/image/img_labs3/5.jpg">
+       <p>
+            Head First Java mang đến trải nghiệm học tập đa phương tiện, tương tác cao, cho phép các lập trình viên mới tiếp nhận các nguyên tắc cơ bản của ngôn ngữ Java một cách nhanh chóng. Thông qua các bài tập kéo dàI, các phép loại suy đáng nhớ, hình ảnh hài hước và ngôn ngữ thông thường, Head First Java khuyến khích người đọc suy nghĩ như một lập trình viên Java. Với cách trình bày độc đáo, phong cách sinh động, câu đố, hình ảnh trực quan… Head First Java không chỉ hay cho bất cứ ai mới học về Java mà còn tốt cho những bạn đã có trình độ cao.<br>
+       </p>
+       <a href="https://slimshare.com/file/5b2cbf84ae2aeb71c10861db" target="_blank">2. Download Java Performance</a>
+       <p>
+        James Gosling từng chia sẻ suy nghĩ của ông rằng: “Nếu bạn yêu thích từng chi tiết nhỏ nhất về performance của các ứng dụng Java thì đây là quyển sách dành cho bạn.”
+        Cuốn này phù hợp nếu bạn đã khá tốt về Java. Kiến thức trong sách giúp những chương trình của bạn đạt được tối đa hiệu quả và giá trị, dù nó có độ phức tạp ra sao, đang chạy trên nền tảng nào, hoặc đã được viết bao lâu. Tác giả: Scoat Oaks
+       </p>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            var i, tabcontent, tabs;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none"; // Ẩn tất cả tab
+            }
+            // Hiển thị tab được chọn
+            document.getElementById(tabName).style.display = "block"; 
+        }
+    </script>
+
+
+
+    <a href="/index.html">Quay Lại Trang Chủ</a>
+</body>
+</html>
