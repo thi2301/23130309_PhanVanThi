@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #59617e;
+    /* background-color: white; */
+    background-image: url('/image/img_br.jpg');
+    background-size: cover; /* Đảm bảo ảnh phủ toàn bộ */
+    background-position: center; /* Căn giữa ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
     margin: 0;
     padding: 20px;
 }
@@ -46,7 +50,6 @@ body {
 .tabs{
     display: flex;
     justify-content: center;
-    background-color: #333;
     margin-top: 10px;
 }
 .tab{
@@ -58,50 +61,44 @@ body {
     transition: background-color 0.3s;
 }
 .tab:hover{
-    background-color: #575757;
+    
 }
 
 <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fbf6f6;
+            background-color: #ffffff;
         }
         header {
-            background-color: #59617e;
             color: white;
-            padding: 20px;
             text-align: center;
         }
         .tabs, .sub-tabs {
             display: flex;
             justify-content: center;
-            background-color: #000000;
             margin-top: 10px;
         }
         .tab, .sub-tab {
             padding: 14px 20px;
             cursor: pointer;
-            color: rgb(255, 255, 255);
+            color: white;
             text-align: center;
             flex: 1;
             transition: background-color 0.3s;
         }
         .tab:hover, .sub-tab:hover {
-            background-color: #86e50a;
+            background-color: #908e84;
         }
         .tab-content, .sub-tab-content {
             display: none;
             padding: 20px;
             background-color: white;
-            border: 1px solid #ccc;
-            margin-top: -1px;
+            border: 1px solid #170707;
+            margin-top: 1px;
         }
         .active {
             display: block;
-            background-color: #a8dbda;
-            border-top: 4px solid #a8dbda;
+            background-color: #e96a6a;
         }
     </style>
 
@@ -151,3 +148,4 @@ body {
             text-decoration: underline;
         }
     </style>
+
