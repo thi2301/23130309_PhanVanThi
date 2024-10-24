@@ -8,51 +8,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./ico/favicon-16x16.png">
     <link rel="manifest" href="./ico/site.webmanifest">
-
+    <link rel="stylesheet" href="/style.css">
     <title>Management Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fbf6f6;
-        }
-        header {
-            background-color: #59617e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .tabs, .sub-tabs {
-            display: flex;
-            justify-content: center;
-            background-color: #000000;
-            margin-top: 10px;
-        }
-        .tab, .sub-tab {
-            padding: 14px 20px;
-            cursor: pointer;
-            color: rgb(255, 255, 255);
-            text-align: center;
-            flex: 1;
-            transition: background-color 0.3s;
-        }
-        .tab:hover, .sub-tab:hover {
-            background-color: #86e50a;
-        }
-        .tab-content, .sub-tab-content {
-            display: none;
-            padding: 20px;
-            background-color: white;
-            border: 1px solid #ccc;
-            margin-top: -1px;
-        }
-        .active {
-            display: block;
-            background-color: #a8dbda;
-            border-top: 4px solid #a8dbda;
-        }
-    </style>
 </head>
 <body>
 
@@ -94,8 +51,23 @@
         <p>Nội dung cho Labs2.</p>
     </div>
     <div id="labs3" class="sub-tab-content">
-        <h3>Tài Liệu Tham Khảo Các Môn Học</h3>
-        <a href="./Labs3/lessons.html">Tài liệu tham khảo</a>
+        <div class="container">
+            <h1>Tài Liệu Tham Khảo Các Môn Học</h1>
+            <div class="card">
+                <h2>Python</h2>
+                <a href="/Labs3/lessons/python.html">View Materials</a>
+            </div>
+            <div class="card">
+                <h2>Html</h2>
+                <a href="/Labs3/lessons/html.html">View Materials</a>
+            </div>
+            <div class="card">
+                <h2>Java</h2>
+                <a href="/Labs3/lessons/java.html">View Materials</a>
+            </div>
+        </div>
+    
+        <a href="/index.html">Quay Lại Trang Chủ</a>
     </div>
     <div id="labs4" class="sub-tab-content">
         <h3>Labs4</h3>
