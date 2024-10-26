@@ -1,0 +1,241 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  nav a i{
+      margin-right: 5px;
+  }
+  
+  nav button {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff; /* Thêm viền trắng */
+  font-weight: bold; /* Làm chữ in đậm */
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  }
+  
+  nav button:hover {
+  background-color: #555;
+  }
+  
+  main {
+    display: flex;
+    padding: 90px 20px 20px; /* Adjust top padding to account for header height */
+  }
+  
+  .left-side {
+   flex: 7;
+   display: flex;
+   flex-direction: column;
+   margin-right: 20px;
+  }
+  
+  .describe{
+      border:2px solid black ;
+      border-radius: 8px;
+      margin-top: 20px;
+      
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+  }
+  
+  .describe h2{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .describe ul {
+      list-style-type: none; /* Loại bỏ ký hiệu */
+  }
+  
+  .describe ul li {
+      margin-top: 20px;
+  }
+  
+  
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .tabs {
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    margin-top: 10px; /* Khoảng cách giữa video và tabs*/
+  }
+  
+  .tab {
+    flex: 1; /* Đảm bảo các tab có chiều rộng đều nhau */
+   padding: 10px; /* Khoảng cách bên trong tab */
+    text-align: center; /* Canh giữa chữ */
+   background-color: #f1f1f1; /* Màu nền mặc định cho tab */
+   border: 1px solid #ccc; /* Đường viền cho tab */
+   border-bottom: none; /* Loại bỏ đường viền dưới cho tab */
+   margin-right: 5px; /* Khoảng cách giữa các tab */
+   transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+  }
+  
+  .tab:last-child {
+  margin-right: 0; /* Không có khoảng cách cho tab cuối cùng */
+  }
+  
+  .tab.active {
+  background-color: #007BFF; /* Màu nền cho tab đang hoạt động */
+   color: #fff; /* Màu chữ cho tab đang hoạt động */
+   font-weight: bold; /* Làm nổi bật chữ */
+   border-top: 2px solid #0056b3; /* Đường viền trên cho tab đang hoạt động */
+  }
+  
+  .tab-content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    margin-top: 10px;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .right-side .course-content {
+    margin-top: 20px;
+  }
+  .course-content {
+    margin-top: 20px;
+  }
+  
+  /*Điều chỉnh cho hiao diện mobile*/
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+  
+    .left-side {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .right-side {
+      position: static;
+      max-height: none;
+    }
+    .section-title {
+   font-size: 14px;
+   }
+  
+  .section-content {
+  font-size: 12px;
+  }
+  
+  }
+  
+  /*--------------------------------------CSS cho phần bên phải-------------------------*/
+  .right-side {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      background-color: #0c1f35;
+      }
+  
+  .section {
+  border: 1px solid #102339;
+  border-radius: 5px;
+  margin-bottom: 1px;
+  }
+  
+  .section-title:hover{
+      background-color: #95acc5;
+  }
+  
+  .section-title {
+  color: white;
+  /* background-color: #ffffff; */
+  padding: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  }
+  
+  .section-title .expand-icon {
+  font-size: 20px;
+  transition: transform 0.3s;
+  }
+  
+  .section-title.active .expand-icon {
+  transform: rotate(90deg);
+  }
+  
+  .section-content {
+  padding: 2px;
+  display: none;
+  }
+  
+  .section-content ul{
+      list-style-type: none; /* Loại bỏ ký hiệu */
+      padding: 0; /* Bỏ padding để căn chỉnh tốt hơn */
+      margin: 0; /* Bỏ margin nếu cần thiết */
+  }
+  .section-content ul li{
+      position: relative; /* Đặt vị trí cho li */
+      padding-left: 25px; /* Tạo khoảng trống cho biểu tượng */
+      cursor: pointer; /* Thay đổi con trỏ khi hover */
+  }
+  
+  .section-content ul li a {
+      text-decoration: none; /* Loại bỏ gạch chân */
+      color: white; 
+  } 
+  
+  .section-content ul li a:hover{
+      background-color: #95acc5;
+  }
+  .section-title span i {
+      margin-right: 5px;
+  }
+  .section-content ul li a i{
+      margin-right: 5px;
+  }
+  
+  
+  

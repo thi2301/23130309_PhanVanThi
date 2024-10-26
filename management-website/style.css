@@ -1,0 +1,243 @@
+body{
+    margin: 0; /* Xóa khoảng cách bên ngoài của body */
+    padding: 0; /* Xóa khoảng cách bên trong của body */
+}
+
+
+.logo{
+    font-size: 25px;
+    font-weight: bold; /* Làm cho chữ đậm hơn */
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(163, 237, 136) ;
+    text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+}
+.header{
+    background-color: rgb(0, 0, 0);
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử con */
+    justify-content: space-between; /* Tạo khoảng cách đều giữa logo và nav */
+    align-items: center; /* Căn giữa theo chiều dọc trong header */
+    padding: 20px 30px; /* Thêm khoảng cách bên trong cho header */
+
+}
+nav ul{
+    display: flex; /* Sắp xếp các mục theo hàng ngang */
+    padding: 0; /* Xóa khoảng cách bên trong của ul */
+    margin: 0; /* Xóa khoảng cách bên ngoài của ul */
+    list-style: none; /* Loại bỏ dấu đầu dòng của danh sách */
+
+}
+nav ul li{
+    margin-right: 20px;
+
+}
+nav ul li a {
+    color: white; /* Màu chữ cho các liên kết là trắng */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+}
+nav ul li a:hover{
+    color:blanchedalmond;
+}
+
+footer{
+    margin: 0px;
+    padding: 5px;
+    font-size: 15px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+/* --------------css home--------------- */
+
+
+.m-h{
+    text-align: center;
+    color: antiquewhite;
+
+    padding: 18px; /* Đặt khoảng cách bên trong cho main bằng 0 */
+    background: url('/img/background-h.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+section{
+    padding: 150px; /* Đặt khoảng cách bên trong cho main bằng 0 */
+    background: url('/img/background1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* -----------CSS Slideshow ---------- */
+.slideshow-container {
+    position: relative;
+    max-width:700px;
+    margin: auto;
+    overflow: hidden; /* Ẩn phần hình ảnh bị tràn ra ngoài */
+}
+
+.slide {
+    display: none; /* Ẩn tất cả các slide */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
+    height: 600px; /* Giảm chiều cao của slideshow */
+
+}
+
+.active {
+    display: block; /* Hiển thị slide hiện tại */
+}
+
+img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    object-fit: cover; /* Giữ tỉ lệ hình ảnh và cắt nếu cần */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10; /* Đảm bảo nút luôn nằm trên hình ảnh */
+}
+
+.next {
+    right: 0;
+
+}
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot {
+    background-color: #717171;
+}
+
+/* -------------CSS About------------- */
+section{
+    color: rgb(247, 242, 102);
+    font-weight: bold;
+}
+
+#thongtincanhan{
+    text-align: center;
+    font-size: 20px;
+}
+
+#row-1 {
+    display: flex; /* Sử dụng Flexbox để tạo hàng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin: 0px; /* Thêm khoảng cách xung quanh */
+    padding: 0 350px;
+}
+
+#col-1-1 {
+    flex: 1; /* Cột 1 có kích thước cố định */
+    margin-right: 20px; /* Khoảng cách giữa cột 1 và cột 2 */
+}
+
+#col-1-2 {
+    flex: 1; /* Cột 2 chiếm phần còn lại của hàng */
+}
+
+.row-2 {
+    display: flex; /* Sử dụng Flexbox để chia thành cột */
+    justify-content: space-between; /* Căn giữa các cột */
+    margin: 20px 0; /* Khoảng cách giữa các dòng */
+}
+
+.col {
+    flex: 1; /* Mỗi cột chiếm 1 phần bằng nhau */
+    margin: 0 50px; /* Khoảng cách giữa các cột */
+    border: 1px solid #ccc; /* Viền cho mỗi cột (tùy chọn) */
+    border-radius: 8px; /* Làm tròn góc */
+    padding: 15px; /* Khoảng cách bên trong */
+}
+
+#lienhe{
+    display: flex;
+    color: black;
+}
+
+/* -----------------labs3--------------- */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+   
+    margin: 20px;
+
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background-color: #1610d2;
+    border: 1px solid #0c0102d4;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tabcontent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------Lab4------------------- */
+

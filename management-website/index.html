@@ -3,123 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Management Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .tabs, .sub-tabs {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            margin-top: 10px;
-        }
-        .tab, .sub-tab {
-            padding: 14px 20px;
-            cursor: pointer;
-            color: white;
-            text-align: center;
-            flex: 1;
-            transition: background-color 0.3s;
-        }
-        .tab:hover, .sub-tab:hover {
-            background-color: #575757;
-        }
-        .tab-content, .sub-tab-content {
-            display: none;
-            padding: 20px;
-            background-color: white;
-            border: 1px solid #ccc;
-            margin-top: -1px;
-        }
-        .active {
-            display: block;
-            background-color: #f9f9f9;
-            border-top: 4px solid #4CAF50;
-        }
-    </style>
+    <title>Management-Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="header" id="header-h">
+            <a href="./index.html" class="logo"> Phan Văn Thi</a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html" > HOME </a></li>
+                    <li><a href="./about.html" > ABOUT </a></li>
+                    <li><a href="./lab1.html" > LAB1 </a></li>
+                    <li><a href="./lab2.html" > LAB2 </a></li>
+                    <li><a href="./lab3.html" > LAB3 </a></li>
+                    <li><a href="./lab4.html" > LAB4 </a></li>
+                    <li><a href="./lab5.html" > LAB5 </a></li>
+                    <li><a href="./contact.html" > CONTACT </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <h1>Management Website</h1>
-</header>
+    <main >
+        <div class="m-h">
+            <h1>Xin chào! Cảm ơn bạn đã ghé thăm trang Web của tôi</h2>
 
-<div class="tabs">
-    <div class="tab" onclick="showTab('home')">Home</div>
-    <div class="tab" onclick="showTab('about')">About</div>
-    <div class="tab" onclick="showTab('labs')">Labs</div>
-</div>
-
-<div id="home" class="tab-content active">
-    <h2>Home</h2>
-    <p>Chào mừng bạn đến với trang quản lý!</p>
-</div>
-<div id="about" class="tab-content">
-    <h2>About</h2>
-    <p>Thông tin về chúng tôi.</p>
-</div>
-<div id="labs" class="tab-content">
-    <h2>Labs</h2>
-    <div class="sub-tabs">
-        <div class="sub-tab" onclick="showSubTab('labs1')">Labs1</div>
-        <div class="sub-tab" onclick="showSubTab('labs2')">Labs2</div>
-        <div class="sub-tab" onclick="showSubTab('labs3')">Labs3</div>
-        <div class="sub-tab" onclick="showSubTab('labs4')">Labs4</div>
-    </div>
-    <div id="labs1" class="sub-tab-content active">
-        <h3>Labs1</h3>
-        <p>Nội dung cho Labs1.</p>
-    </div>
-    <div id="labs2" class="sub-tab-content">
-        <h3>Labs2</h3>
-        <p>Nội dung cho Labs2.</p>
-    </div>
-    <div id="labs3" class="sub-tab-content">
-        <h3>Labs3</h3>
-        <p>Nội dung cho Labs3.</p>
-    </div>
-    <div id="labs4" class="sub-tab-content">
-        <h3>Labs4</h3>
-        <p>Nội dung cho Labs4.</p>
-    </div>
-</div>
-
-<script>
-    function showTab(tabId) {
-        const tabs = document.querySelectorAll('.tab-content');
-        tabs.forEach(tab => {
-            tab.classList.remove('active');
-        });
-        document.getElementById(tabId).classList.add('active');
+                <!-----------SlideShow --------------->
+                <div class="slideshow-container">
+                
+                    <div class="slide">
+                        <img src="/img/image2.jpg" alt="Image 2">
+                    </div>
+                
+                    <div class="slide">
+                        <img src="/img/image3.jpg" alt="Image 3">
+                    </div>
+                
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+                
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
         
-        // Reset sub-tabs when switching to Labs
-        if (tabId !== 'labs') {
-            const subTabs = document.querySelectorAll('.sub-tab-content');
-            subTabs.forEach(subTab => {
-                subTab.classList.remove('active');
-            });
-            document.getElementById('labs1').classList.add('active'); // Default to Labs1
-        }
-    }
+        </div>
+    </main>
 
-    function showSubTab(subTabId) {
-        const subTabs = document.querySelectorAll('.sub-tab-content');
-        subTabs.forEach(subTab => {
-            subTab.classList.remove('active');
-        });
-        document.getElementById(subTabId).classList.add('active');
-    }
-</script>
+    <footer>
+        <p>© Copyright Phan Văn Thi. All Rights Reserved</p>
+        <p>Designed by Phan Văn Thi</p>
+    </footer>
+
+
+    <!---------------Scrip Slideshow --------------- -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName("dot");
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active-dot";
+            setTimeout(showSlides, 5000); // Chuyển slide mỗi 5 giây
+        }
+    
+        function changeSlide(n) {
+            slideIndex += n;
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName("dot");
+    
+            if (slideIndex > slides.length) {slideIndex = 1}
+            if (slideIndex < 1) {slideIndex = slides.length}
+    
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active-dot";
+        }
+    
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides();
+        }
+    </script>
+    
 
 </body>
 </html>

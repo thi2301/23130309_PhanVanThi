@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <a href="../../lab3.html">Quay Lại</a>
+    <div class="tabs">
+        <div class="tab" onclick="showTab('baigiang')">Bài Giảng</div>
+        <div class="tab" onclick="showTab('baitap')">Bài Tập</div>
+        <div class="tab" onclick="showTab('tailieuthamkhao')">Tài Liệu Tham Khảo</div>
+    </div>
+    <div id="baigiang" class="tabcontent" style="display:none;">
+        <h3>HTML là gì ?</h2>
+        <p>
+            HTML là chữ viết tắt của Hypertext Markup Language, là ngôn ngữ được sử dụng rộng rãi nhất để viết các trang Web.<br>
+            Hypertext là cách mà các trang Web (các tài liệu HTML) được kết nối với nhau. Và như thế, đường link có trên trang Web được gọi là Hypertext.<br>
+            Như tên gọi đã gợi ý, HTML là ngôn ngữ đánh dấu bằng thẻ (Markup Language), nghĩa là bạn sử dụng HTML để đánh dấu một tài liệu text bằng các thẻ (tag) để nói cho trình duyệt Web cách để cấu trúc nó để hiển thị ra màn hình.<br>
+            Lúc đầu, HTML được phát triển với mục đích để xác định cấu trúc của các tài liệu như các tiêu đề, các đoạn văn, các danh sách… và tạo sự thuận lợi cho việc chia sẻ thông tin khoa học giữa các nhà nghiên cứu.<br>
+            Bây giờ, HTML đã được sử dụng rộng rãi để định dạng các trang Web với sự giúp đỡ của các tag khác nhau có trong ngôn ngữ HTML.<br>
+            Ví dụ một tài liệu HTML cơ bản<br>
+            Dưới đây là một ví dụ về một trong các mẫu đơn giản nhất của tài liệu HTML.<br>
+            <code>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;head&gt;
+                    &lt;title&gt;Day la tieu de&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;h1&gt;Day la dau de&lt;/h1&gt;
+                    &lt;p&gt;Phan noi dung cua tai lieu ...&lt;/p&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+            </code>
+        </p>
+        <p>
+            Bạn có thể sử dụng tùy chọn Try it có trên góc trên bên phải của hộp code để kiểm tra 
+            kết quả của code HTML này, hoặc bạn lưu nó vào trong file HTML (test.htm), 
+            sử dụng bộ biên soạn văn bản mà bạn thích. Cuối cùng, bạn sử dụng một 
+            trình duyệt Web chẳng hạn như Internet Explore, Google Chrome, hoặc Firefox… 
+            để mở nó. Nó sẽ hiển thị kết quả sau:<br>
+        </p>
+        <img src="../../image/img_labs3/4.jpg" alt="ảnh minh họa">
+    </div>
+
+    <div id="baitap" class="tabcontent" style="display:none;">
+        <h2>Các bài tập HTML/CSS CƠ BẢN</h3>
+        <p>
+            <b>1. Thiết kế giao diện cho chức năng user như sau</b>
+            <pre>
+User Interface Design Requirements:
+    : Text Input (Single-line)
+    : “Username”
+    : Must be unique, maximum 255 characters.
+    : A text box with a hint (placeholder) like "Enter your username."
+
+    : Password Input (Single-line with hidden text) 
+    : “Password”
+    : Minimum password strength check, maximum 255 characters.
+    : A text box that hides the text input, with a “Show/Hide” toggle.
+
+    : Email Input
+    : “Email Address”
+    : Must be a valid email format and unique, maximum 255 characters.
+    : A text box with a placeholder like "Enter your email."
+ (Optional):
+    : Text Input (Single-line)
+    : “Full Name” (optional)
+    : A regular text box, with a placeholder like "Enter your full name."
+
+    : Dropdown / Select Menu
+    : “Role”
+    : Required field.
+    : A dropdown menu listing the available roles fetched from the system (e.g., Admin, User, etc.).
+
+    : File Upload or URL Input (for image URL)
+    : “Profile Picture”
+    : An upload button or URL field that allows users to upload or enter a URL for their profile picture, with a preview box for the image.
+ (Read-only):
+    : Text or Date Display (Read-only)
+    : “Account Created At”
+    : Automatically populated field, no input needed. Display this as a timestamp or date.
+ (Read-only):
+    : Text or Date Display (Read-only)
+    : “Last Updated At”
+    : Automatically updated field when the user’s information is edited. Display this as a timestamp or date.
+
+    : Button
+    : “Create Account” / “Save Changes” (depending on context)
+    : A primary action button that submits the form. Ensure it's disabled until all required fields are validated.
+
+(Optional):
+    : Button
+    : “Cancel”
+    : A secondary action button that cancels the form submission and returns the user to the previous page.
+Additional Considerations:
+    : Use inline validation messages under each input field for errors like "Username is already taken" or "Invalid email format."
+    : Ensure the form is responsive, working well on both desktop and mobile.
+            </pre>
+        </p>
+        <P>
+            <b>2. Hãy tạo một trang web với login form HTML theo mẫu sau:</b>
+        </P>
+        <img src="/image/img_labs3/Screenshot 2024-10-12 222126.png" alt="ảnh minh họa bài tập html">
+    </div>
+
+    <div id="tailieuthamkhao" class="tabcontent" style="display:none;">
+        <h2>Tài Liêu Học HTML cơ bản dành cho người mới bắt đầu</h2>
+        <a href="https://www.amazon.com.au/Learn-HTML-Beginners-Illustrated-Coding/dp/1911174916v" target="_blank">1. Learning HTML for Beginners: The Illustrated guide to Coding</a>
+        <p>
+            Một cuốn sách hữu ích dành cho những ai mới bắt đầu tìm hiểu về HTML. Không chỉ cung cấp lý thuyết về lập trình HTML và CSS, 
+            cuốn sách còn có các ví dụ minh họa với màu sắc sinh động, nội dung trình bày ngắn gọn và dễ hiểu. Nếu bạn muốn học HTML cơ bản và nhanh chóng thì có thể 
+            tham khảo qua cuốn sách này nhé! <br>
+            Bạn sẽ học được gì từ cuốn sách này? <br>
+            <li>Kiến thức cơ bản về HTML (phần tử, kiểu bảng, danh sách, biểu mẫu, tiêu đề,…)</li>
+            <li>Căn chỉnh nội dung và xây dựng cấu trúc web với HTML5.</li>
+            <li>Làm quen với cú pháp HTML và CSS với các hướng dẫn tham khảo cụ thể. </li>
+            
+        </p>        
+        <a href="https://www.amazon.com/Head-First-HTML-CSS-Standards-Based/dp/0596159900/ref=sr_1_1?dib=eyJ2IjoiMSJ9.KIAPYwbFQlZkOWNBT3U1naTTPGBOJQeOS99VJYaRGXCPQrb4I2GFGwK_l_C-uUCZe-brywm-RDMxskN0M4uCzgvP0qvtcmPaNrQtZ23Ro1UpnawXzZHbus5Gt7O1P1ZG3pd1J7PeKI7QjH1bsKAbnEf7jnDR9xxvH70OvSaqj56xDlwj1iktN5UYKFsiuRopZwy-hEkN_sx7O_OjiS1Ibsi_IbafivtNssxo1d15YR4.PWw8RWgVc3omwOge0EtF0pMQIoUZED20HI-ypdkWBo0&dib_tag=se&keywords=Head+First+HTML+%26+CSS&qid=1711440544&s=books&sr=1-1" target="_blank">2. Head First HTML & CSS </a>
+        <p>
+            Cuốn sách được viết bởi Elizabeth Robson và Eric Freeman, tổng hợp các kiến thức cơ bản về HTML cũng như cấu trúc xây dựng một trang web hoàn chỉnh, phù hợp cho người ai mới bắt đầu tìm hiểu về HTML.  <br>
+            Bạn học được gì từ cuốn sách này? <br>
+            <li>Kiến thức cơ bản về HTML. </li>
+            <li>Làm quen kiến thức chuyên sâu về cách dựng một cấu trúc web.</li>
+        </p>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            var i, tabcontent, tabs;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none"; // Ẩn tất cả tab
+            }
+            // Hiển thị tab được chọn
+            document.getElementById(tabName).style.display = "block"; 
+        }
+    </script>
+
+
+
+    <a href="/index.html">Quay Lại Trang Chủ</a>
+</body>
+</html>
