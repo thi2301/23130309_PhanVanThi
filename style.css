@@ -55,14 +55,14 @@ footer{
     color: antiquewhite;
 
     padding: 18px; /* Đặt khoảng cách bên trong cho main bằng 0 */
-    background: url('/img/background-h.jpg');
+    background: url('./img/background-h.jpg');
     background-size: cover;
     background-position: center;
 }
 
 section{
     padding: 150px; /* Đặt khoảng cách bên trong cho main bằng 0 */
-    background: url('/img/background1.jpg');
+    background: url('./img/background1.jpg');
     background-size: cover;
     background-position: center;
 }
