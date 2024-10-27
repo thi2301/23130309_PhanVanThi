@@ -16,9 +16,10 @@ body{
     display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử con */
     justify-content: space-between; /* Tạo khoảng cách đều giữa logo và nav */
     align-items: center; /* Căn giữa theo chiều dọc trong header */
-    padding: 20px 30px; /* Thêm khoảng cách bên trong cho header */
+    padding: 30px 30px; /* Thêm khoảng cách bên trong cho header */
 
 }
+
 nav ul{
     display: flex; /* Sắp xếp các mục theo hàng ngang */
     padding: 0; /* Xóa khoảng cách bên trong của ul */
@@ -60,12 +61,7 @@ footer{
     background-position: center;
 }
 
-section{
-    padding: 150px; /* Đặt khoảng cách bên trong cho main bằng 0 */
-    background: url('./img/background1.jpg');
-    background-size: cover;
-    background-position: center;
-}
+
 
 /* -----------CSS Slideshow ---------- */
 .slideshow-container {
@@ -141,6 +137,10 @@ img {
 
 /* -------------CSS About------------- */
 section{
+    padding: 150px; /* Đặt khoảng cách bên trong cho main bằng 0 */
+    background: url('./img/background1.jpg');
+    background-size: cover;
+    background-position: center;
     color: rgb(247, 242, 102);
     font-weight: bold;
 }
@@ -240,4 +240,27 @@ a:hover {
 }
 
 /* -------------------Lab4------------------- */
+
+
+/* -------------------Project------------------ */
+.background-project{
+    background: url('./image/background-project.jpg');
+    background-size: cover; /* Hoặc 'contain' tùy vào yêu cầu */
+    background-position: center; /* Căn giữa ảnh nền */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+    width: 100%; /* Chiều rộng của thẻ chính */
+    height: 1000px; /* Hoặc chiều cao mong muốn */
+}
+.m-project{
+    text-align: center;
+    padding: 100px;
+    color: rgb(146, 206, 25);
+}
+
+.m-project h1{
+    margin: 0;
+}
+.m-project a i{
+    
+}
 
