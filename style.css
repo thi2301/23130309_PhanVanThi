@@ -264,3 +264,26 @@ a:hover {
     
 }
 
+/* ------------------labs 5-------------------- */
+.header-lab5{
+    background-color: #1d1d1d;
+    color: white;
+}
+
+
+.navbar-lab5 ul {
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+
+.navbar-lab5 ul li a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar-lab5 ul li a:hover{
+    /* background-color: white;
+    color : #1d1d1d; */
+    border-bottom: 3px solid #fff;
+}
