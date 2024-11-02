@@ -398,4 +398,74 @@ a:hover {
     display:flex;
     align-items: center; 
 }   
+ 
+/* ---------------------lab6------------------ */
+/* .navbar-l6{
+    display: flex;
 
+} */
+.navbar-l6 ul{
+    display: flex;
+    list-style: none;
+ 
+}
+.navbar-l6 ul li {
+    height: auto;
+    padding: 15px;
+    
+}
+.navbar-l6 ul li a{
+    list-style: none;
+    text-decoration: none; 
+    background-color: #ddd;
+    padding: 8px;
+    border-radius: 30%;
+}
+.body-lab6{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.card-1-l6{
+    flex: 0 0 300px;
+    border: #e1e1e1 solid 1px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.card-1-l6 img{
+    width: 250px;
+    height: 150px;
+    
+}
+
+/* CSS nút điều hướng */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-buttons button {
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+    background-color: #e9ecef;
+}
+
+.nav-buttons button i {
+    color: #495057;
+    font-size: 20px;
+}
