@@ -400,26 +400,30 @@ a:hover {
 }   
  
 /* ---------------------lab6------------------ */
-/* .navbar-l6{
-    display: flex;
+.navbar-l6{
+   
 
-} */
+}
 .navbar-l6 ul{
     display: flex;
     list-style: none;
- 
+    overflow-x: auto;
 }
 .navbar-l6 ul li {
-    height: auto;
     padding: 15px;
-    
+   
 }
 .navbar-l6 ul li a{
     list-style: none;
     text-decoration: none; 
     background-color: #ddd;
-    padding: 8px;
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px;
     border-radius: 30%;
+
+
 }
 .body-lab6{
     display: flex;
@@ -430,19 +434,36 @@ a:hover {
 }
 
 .card-1-l6{
-    flex: 0 0 300px;
+    flex: 0 0 350px;
     border: #e1e1e1 solid 1px;
-    text-align: center;
+    text-align: left;
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s;
 }
-.card-1-l6 img{
-    width: 250px;
-    height: 150px;
-    
+.content-1-l6{
+    padding: 20px;
+    padding-top: 0;
+
 }
+.card-1-l6 img{
+    width: 350px;
+    height: 200px;
+}
+.content-1-l6 i{
+    color: #6e4600d4;
+}
+
+.bottom button{
+    border: #495057 solid 1px;
+    width: 400px;
+    height: 50px;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 
 /* CSS nút điều hướng */
 .nav-buttons {
