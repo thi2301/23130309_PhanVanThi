@@ -464,6 +464,45 @@ a:hover {
     font-weight: 600;
 }
 
+.card-1-l6 {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-1-l6 .hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s, transform 0.3s;
+
+    padding: 20px;
+
+  }
+  .hover-content ul{
+    list-style: none;
+  }
+
+  
+  .card-1-l6:hover .hover-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card-1-l6 .hover-content h3,
+  .card-1-l6 .hover-content p {
+    margin: 10px 0;
+  }
+
 
 /* CSS nút điều hướng */
 .nav-buttons {
@@ -489,4 +528,41 @@ a:hover {
 .nav-buttons button i {
     color: #495057;
     font-size: 20px;
+}
+
+/* ---------CSS coderbyte------------ */
+.container-coderbyte{
+    display: grid;
+    grid-template-columns: 25vw 2fr 25vw; /* Đặt chiều rộng cụ thể */
+    height: 80vh;
+    padding-top: 25px;
+    margin: 0;
+}
+
+.content-coderbyte{
+    text-align: center;
+}
+
+.content-coderbyte p, a{
+    font-size: 1rem;
+}
+.content-coderbyte h1{
+    font-size: 2.6rem;
+}
+
+.bottom-bg{
+    width: 100vw;
+}
+
+.left-bg,
+.right-bg {
+    background-size: cover; /* Đảm bảo ảnh nền phủ đầy phần tử */
+    background-position: center; /* Căn giữa ảnh nền */
+}
+.left-bg {
+    background-image: url('../image/img_labs6/left-side.png');
+}
+
+.right-bg {
+    background-image: url('../image/img_labs6/right-side@2x.png');
 }
