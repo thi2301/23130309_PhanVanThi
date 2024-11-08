@@ -401,7 +401,7 @@ a:hover {
  
 /* ---------------------lab6------------------ */
 .navbar-l6{
-   
+   overflow-x: auto;
 
 }
 .navbar-l6 ul{
@@ -420,10 +420,10 @@ a:hover {
     color: black;
     font-weight: 600;
     font-size: 15px;
-    padding: 10px;
-    border-radius: 30%;
-
-
+    padding: 15px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.2rem;
 }
 .body-lab6{
     display: flex;
@@ -565,4 +565,27 @@ a:hover {
 
 .right-bg {
     background-image: url('../image/img_labs6/right-side@2x.png');
+}
+
+.bar-lab6{
+
+}
+.bar-lab6 ul{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+ 
+}
+.bar-lab6 ul li{
+    margin: 2rem;
+}
+.bar-lab6 ul li a{
+    text-decoration: none;
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #000000;
+}
+.bar-lab6 ul li a:hover{
+    color: #93ff46;
+    background-color: #101247;
 }
