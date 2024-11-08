@@ -413,6 +413,12 @@ a:hover {
     padding: 15px;
    
 }
+
+.navbar-l6 li a span{
+    font-size: 0.7rem;
+    font-weight: 100;
+    color: #495057;
+}
 .navbar-l6 ul li a{
     list-style: none;
     text-decoration: none; 
@@ -545,7 +551,9 @@ a:hover {
 
 .content-coderbyte p, a{
     font-size: 1rem;
+    color: #a5a5a5;
 }
+
 .content-coderbyte h1{
     font-size: 2.6rem;
 }
@@ -588,4 +596,59 @@ a:hover {
 .bar-lab6 ul li a:hover{
     color: #93ff46;
     background-color: #101247;
+}
+
+.login-coderbyte{
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+}
+.login-coderbyte button{
+    width: 7rem;
+    height: 3.1rem;
+    border: none; /* Bỏ viền */
+    padding: 0;
+    margin: 0;
+    color:rgb(255, 255, 255);
+    background-color: rgb(110, 146, 38);
+}
+.login-coderbyte input{
+    width: 20rem;
+    height: 3rem;
+    background:#ccc;
+    border: none; /* Bỏ viền */
+    outline: none; /* Bỏ viền khi được chọn */
+    padding-left: 1.5rem; /* Khoảng cách từ lề trái */
+}
+
+/* ----------------CSS Learning-------------- */
+.container-learning{
+    display: flex;
+
+}
+.left-learning, .right-learning{
+    flex: 1; /*chia đều 2 bên*/
+}
+.left-learning{
+    margin-left: 1rem;
+}
+.li-learning{
+    display: flex;
+    border: 1px solid #ddd;
+}
+.icon-learning{
+    flex: 2;
+}
+.content-learning{
+    flex: 8;
+}
+.icon-learning i{
+    font-size: 2.5rem;
+}
+.content-left-learning ul{
+    padding: 0;
+}
+.content-left-learning ul li {
+    margin: 1rem 0;
+    padding: 1rem;
 }
