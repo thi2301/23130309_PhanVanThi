@@ -652,3 +652,61 @@ a:hover {
     margin: 1rem 0;
     padding: 1rem;
 }
+
+.container-learning{
+    
+}
+
+.containerization{
+    border: 1px solid #bbb;
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: 1rem;
+    margin-top: 5rem;
+    /* margin: 5rem 8rem; */
+}
+
+.header-containerization{
+    text-align: left;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #bbb;
+}
+
+.top-containerization{
+    border-bottom: 1px solid #bbb;
+    justify-content: space-between;
+    background-color: rgb(223, 227, 238);
+}
+
+.score-containerization{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem;
+}
+.score-containerization a{
+    color: #1610d2;
+    text-decoration: underline;
+}
+
+.assessment-containerization{
+    border: 1px solid #bbb;
+    display: flex;
+    margin: 0 5rem;
+}
+.assessment-containerization i{
+    flex:1;
+    padding-top: 1.5rem;
+    color: #007bff;
+}
+.assessment-containerization p{
+    flex: 9;
+}
+
+.answers-containerization{
+    margin: 0 5rem;
+    text-align: left;
+}
+
+
+
+
