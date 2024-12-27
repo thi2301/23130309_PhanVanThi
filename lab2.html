@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style_lab2.css">
     <title>Lab2</title>
 </head>
 <body>
@@ -19,7 +20,6 @@
                     <li><a href="./lab4.html" > LAB4 </a></li>
                     <li><a href="./lab5.html" > LAB5 </a></li>
                     <li><a href="./Labs6/lab6.html" > LAB6 </a></li>
-                    <li><a href="./lab7.html" > LAB7 </a></li>
                     <li><a href="./contact.html" > CONTACT </a></li>
                     <li><a href="https://thi2301.github.io/hci2025group05/" target="_blank"> PROJECT </a></li>
                 </ul>
@@ -28,12 +28,157 @@
     </header>
 
     <main>
-        <p>nội dung</p>
+        <button id="myBtn-login">Login</button>
+        <form action="">
+             <!-- The Modal -->
+        <div id="myModal-login" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close-modal">&times;</span> <!-- Icon đóng modal -->
+                    <h2>Login</h2>
+                    <div class="input-user">                                  
+                        <input type="email" required>
+                        <label for="email">Email</label>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="input-password">                           
+                        <input type="password" required>
+                        <label for="password">Passwword</label>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="forgot-pass">
+                        <p style="margin: 0; padding: 1rem;"><input type="checkbox">Remember me  <a href="">Forgot password?</a></p>
+                       
+                    </div>
+                    <button type="submit">Login</button>
+                    <div class="register-new">
+                        <p>Don't have an account? <a href="">Register</a></p>
+                    </div>
+            </div>  
+        </div>
+        </form>
+        <button id="myBtn-register">Register</button>
+        <form action="">
+            <!-- The Modal -->
+        <div id="myModal-register" class="modal">
+           <!-- Modal content -->
+           <div class="modal-content">
+               <span class="close-modal">&times;</span> <!-- Icon đóng modal -->
+                   <h2>Register</h2>
+                   <div class="input-user">                                  
+                    <input type="text" required>
+                    <label for="username">UserName</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                   <div class="input-user">                                  
+                       <input type="email" required>
+                       <label for="email">Email</label>
+                       <i class="fa-solid fa-user"></i>
+                   </div>
+                   <div class="input-password">                           
+                       <input type="password" required>
+                       <label for="password">Passwword</label>
+                       <i class="fa-solid fa-lock"></i>
+                   </div>
+                   <div class="forgot-pass">
+                       <p style="margin: 0; padding: 1rem;"><input type="checkbox">I agree to the terms & conditions</p>
+                      
+                   </div>
+                   <button type="submit">Register</button>
+                   <div class="register-new">
+                       <p>Already have an account? <a href="">Login</a></p>
+                   </div>
+           </div>  
+        </div>
+        </form>
+    </div>
+</ul>
+</nav>
     </main>
 
     <footer>
         <p>© Copyright Phan Văn Thi. All Rights Reserved</p>
         <p>Designed by Phan Văn Thi</p>
     </footer>
+
+
+    <!-- --------------scrip  Login/register------------------------ -->
+<script>
+    // Lấy các phần tử cần thiết
+const loginModal = document.getElementById("myModal-login");
+const registerModal = document.getElementById("myModal-register");
+
+const loginBtn = document.getElementById("myBtn-login");
+const registerBtn = document.getElementById("myBtn-register");
+
+const closeButtons = document.querySelectorAll(".close-modal");
+const registerLink = document.querySelector("#myModal-login .register-new a");
+const loginLink = document.querySelector("#myModal-register .register-new a");
+
+// Mở modal Login
+loginBtn.addEventListener("click", () => {
+    loginModal.style.display = "flex";
+});
+
+// Mở modal Register
+registerBtn.addEventListener("click", () => {
+    registerModal.style.display = "flex";
+});
+
+// Đóng modal khi nhấn vào icon close
+closeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        loginModal.style.display = "none";
+        registerModal.style.display = "none";
+    });
+});
+
+// Đóng modal khi nhấn ra ngoài modal
+window.addEventListener("click", (event) => {
+    if (event.target === loginModal) {
+        loginModal.style.display = "none";
+    }
+    if (event.target === registerModal) {
+        registerModal.style.display = "none";
+    }
+});
+
+// Chuyển từ Login sang Register
+registerLink.addEventListener("click", (event) => {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+    loginModal.style.display = "none";
+    registerModal.style.display = "flex";
+});
+
+// Chuyển từ Register sang Login
+loginLink.addEventListener("click", (event) => {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+    registerModal.style.display = "none";
+    loginModal.style.display = "flex";
+});
+    </script>
+    
+    <!-- xử lý logic hiển thị của label -->
+    <script>
+        const inputs = document.querySelectorAll(".input-user input, .input-password input");
+        inputs.forEach(input => {
+            input.addEventListener("focus", () => {
+                const label = input.nextElementSibling;
+                if (label) {
+                    label.style.transform = "translateY(-1rem)";
+                    label.style.fontSize = "0.8rem";
+                }
+            });
+
+            input.addEventListener("blur", () => {
+                const label = input.nextElementSibling;
+                if (label && input.value === "") {
+                    label.style.transform = "translateY(0)";
+                    label.style.fontSize = "1rem";
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
