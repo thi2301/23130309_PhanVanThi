@@ -101,23 +101,47 @@ input{
     border-bottom: 2px solid #000;
     border-radius: 0;
     background: transparent; /*nền trong suốt*/
+
+    width: 100%;
 }
 
-
+.input-user {
+    width: 50%;
+}
 
 .input-user label{
     position: absolute;
-    left: 11rem;
+    left: 9rem;
+    top: 12rem;
     user-select: none;
     pointer-events: none; /* Để label không chặn tương tác với input */
     font-weight: 300;
     opacity: 0.5;
     padding: 0 0.8rem;
+}
+
+.input-user2 {
+    width: 50%;
+}
+.input-user2 label{
+    position: absolute;
+    left: 9rem;
+    top: 15rem;
+    user-select: none;
+    pointer-events: none; /* Để label không chặn tương tác với input */
+    font-weight: 300;
+    opacity: 0.5;
+    padding: 0 0.8rem;
+}
+
+.input-password {
+    width: 50%;
 }
 
 .input-password label{
     position: absolute;
-    left: 11rem;
+    left: 9rem;
+    top: 15rem;
     user-select: none;
     pointer-events: none; /* Để label không chặn tương tác với input */
     font-weight: 300;
@@ -125,6 +149,21 @@ input{
     padding: 0 0.8rem;
 }
 
+.input-password2{
+    width: 50%;
+}
+
+
+.input-password2 label{
+    position: absolute;
+    left: 9rem;
+    top: 17.5rem;
+    user-select: none;
+    pointer-events: none; /* Để label không chặn tương tác với input */
+    font-weight: 300;
+    opacity: 0.5;
+    padding: 0 0.8rem;
+}
 
 
 .input-user input:focus ~ label,
@@ -135,8 +174,24 @@ input{
     transition: .5s;
 }
 
+.input-user2 input:focus ~ label,
+.input-user2 input:valid ~ label{
+    font-size: 0.8rem ;
+    transform: translateY(-1rem);
+    font-weight: 1000;
+    transition: .5s;
+}
+
 .input-password input:focus ~ label,
 .input-password input:valid ~ label{
+    font-size: 0.8rem ;
+    transform: translateY(-1rem);
+    font-weight: 1000;
+    transition: .5s;
+}
+
+.input-password2 input:focus ~ label,
+.input-password2 input:valid ~ label{
     font-size: 0.8rem ;
     transform: translateY(-1rem);
     font-weight: 1000;
