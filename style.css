@@ -404,9 +404,15 @@ a:hover {
 
 
  .card-img{
+    width: 1rem;
+    height: 1rem;
+ }
+ 
+ .cards .card-img{
     width: 300px;
     height: 200px;
  }
+
  .cards{
     padding: 20px;
     padding-top: 40px;
